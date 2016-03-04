@@ -13,16 +13,16 @@ __Utmana dig själv för att ta dig till uppgiftens C-nivå__! Det ger dig bra e
 
 - [Uppgiftsbeskrivning på A-nivå:](a-niva/)
 
-![ScreenShot A](bilder/alarmClock_A.png)
+![ScreenShot A](bilder/a-bilder/alarmClock_A.png)
 
 Figur 1: Kravnivå A
 
 - [Uppgiftsbeskrivning på B-nivå:](b-niva/)
 
-![ScreenShot B](bilder/alarmClock_B.png)
+![ScreenShot B](bilder/b-bilder/alarmClock_B.png)
 Figur 2: Kravnivå B
 
 - [Uppgiftsbeskrivning på C-nivå:](c-niva/)
 
-![ScreenShot C](bilder/alarmClock_C.png)
+![ScreenShot C](bilder/c-bilder/alarmClock_C.png)
 Figur 3: Kravnivå C
