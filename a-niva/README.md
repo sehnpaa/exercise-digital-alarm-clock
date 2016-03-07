@@ -81,7 +81,7 @@ ___Klassen AlarmClock___
 
 Klassen ```AlarmClock``` måste implementeras så den som minst innehåller medlemmarna enligt klassdiagrammet i Figur A.9 och har den funktionalitet som beskrivs för respektive medlem.
 
-![Class diagram](../bilder/classDiagramAC.png)
+![Class diagram](../bilder/a-bilder/classDiagramAC.png)
 
 Figur A.9. Klassdiagram för klassen AlarmClock.
 
@@ -145,7 +145,7 @@ Denna klass ska innehålla koden som testar klassen ```AlarmClock```.
 
 Figur A.10 visar ett förslag på medlemmar som kan användas för att skapa de sju testerna under rubriken ”Testlista” ovan. Klassen ```Program``` måste dock inte följa förslaget, vilket enbart ska ses som en rekommendation. Det finns bara ett krav som måste uppfyllas och det är att metoden ```Main()``` måste se till att de sju deltesterna genomförs på avsett sätt.
 
-![Class diagram](../bilder/classDiagramA.png)
+![Class diagram](../bilder/a-bilder/classDiagramA.png)
 
 Figur A.10. Förslag på medlemmar i klassen Program.
 
@@ -161,7 +161,7 @@ _Metoden ViewErrorMessage_
 
 Privat statisk metoden som tar ett felmeddelande som argument och presenterar det.
 
-![Class diagram](../bilder/errorMessageA.png)
+![Class diagram](../bilder/a-bilder/errorMessageA.png)
 
 Figur A.11. Exempel på presentation av två felmeddelanden.
 
@@ -169,7 +169,7 @@ _Metoden ViewTestHeader_
 
 Privat statisk metod som tar en sträng som argument och presenterar strängen.
 
-![Class diagram](../bilder/testHeaderA.png)
+![Class diagram](../bilder/a-bilder/testHeaderA.png)
 
 Figur A.12. Exempel på ett tests rubrik inklusive horisontell linje ovan testrubriken.
 
