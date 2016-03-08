@@ -7,21 +7,21 @@ Digitala klockor visar tiden med siffror. Två sorters visning förekommer:
 * 24-timmars som visar 0:00 – 23:59
 * 12 timmars som visar 1:00 – 12:59
 
-Du ska skriva ett program som simulerar en 24-timmars digital klockdisplay, genom att skapa och använda dig av klassen AlarmClock. Förutom att hålla ordning på aktuell tid ska  klassen även kunna hantera en alarmtid. Du kontrollerar att klassen fungerar som det är tänkt genom att skriva ett mindre test.  
+Du ska skriva ett program som simulerar en 24-timmars digital klockdisplay, genom att skapa och använda dig av klassen ```AlarmClock```. Förutom att hålla ordning på aktuell tid ska  klassen även kunna hantera en alarmtid. Du kontrollerar att klassen fungerar som det är tänkt genom att skriva ett mindre test.  
 
 ![ScreenShot A](../bilder/a-bilder/alarmClock_A.png)
 
 Figur A.1. Exempel på resultat vid test av klassen AlarmClock.
 
-___Hantering av timmar och minuter___
+#####Hantering av timmar och minuter
 
 Den digitala klockdisplayen ska presentera tiden i timmar och minuter, t.ex. 9:57. Värdet till vänster om kolontecknet är timmarna, som går från 0 till och med 23. Passeras 23 ska värdet sättas till 0. Värdet till höger är minuterna. Giltiga värden för dessa är 0 till och med 59. Passeras 59 ska värdet sättas till 0.
 
 I princip handlar det om att låta en tidpunkt utgöras av två värden som presenteras åtskilda av ett kolon (:). Med andra ord kan en tidpunkt hanteras med hjälp av två heltal i form av två privata fält i klassen ```AlarmClock```. För att säkerställa att fälten verkligen inte tilldelas felaktiga värden måste dessa kapslas in av publika egenskaper, vars set-metoder kastar undantag om försök görs att tilldela egenskaperna ogiltiga värden.
 
-___Test av klassen___
+#####Test av klassen
 
-För att säkerställa att klassen ```AlarmClock``` uppfyller ställda krav ska ett enklare test skrivas som visar detta. Testet ska innehålla kod som verifierar att konstruktorer, egenskaper och metoder fungerar. Efter att klassen ```AlarmClock``` har implementerats ska testkoden skrivs i metoden ```Main()``` i klassen ```Program``` samt bestå av sju deltester:
+För att säkerställa att klassen ```AlarmClock``` uppfyller ställda krav ska ett enklare test skrivas som visar detta. Testet ska innehålla kod som verifierar att konstruktorer, egenskaper och metoder fungerar. Efter att klassen ```AlarmClock``` har implementerats ska testkoden skrivas i metoden ```Main()``` i klassen ```Program``` samt bestå av sju deltester:
 
 _Testlista_
 
@@ -51,9 +51,9 @@ _Testlista_
 	
 4. Test av metoden ```TickTock()``` som ska låta klockan gå en minut.
 	
-	Ställ ett befintligt ```AlarmClock```-objekt till 23:58 och låter väckarklockan gå 13 minuter. Lista med 13 tider ska skrivas ut där minutvärdet ökar med en minut för varje tid.
+	Ställ ett befintligt ```AlarmClock```-objekt till 23:58 och låt väckarklockan gå 13 minuter. Lista med 13 tider ska skrivas ut där minutvärdet ökar med en minut för varje tid.
 	
-	Timmar ska gå från 23 till 0 och i de3 fall timmar utgörs av ett ental ska timmen beskrivas med enbart en siffra. När minuterna är ental ska beskrivningen av minuten inledas med 0.
+	Timmar ska gå från 23 till 0 och i de fall timmar utgörs av ett ental ska timmen beskrivas med enbart en siffra. När minuterna är ental ska beskrivningen av minuten inledas med 0.
 	
 	![ScreenShot A](../bilder/a-bilder/testA_4.png)
 	
@@ -71,13 +71,17 @@ _Testlista_
 	
 	Figur A.7.
 	
+	(Av felmeddelandena framgår inte att det första och andra meddelandet berör väckarklockans tid och det tredje och fjärde felmeddelandet berör väckarklockans alarmtid.)
+	
 7. Test av konstruktorer så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.
 	
 	![ScreenShot A](../bilder/a-bilder/testA_7.png)
 	
 	Figur A.8.
+	
+	(Av felmeddelandena framgår inte att det första meddelandet berör väckarklockans tid och det andra felmeddelandet berör väckarklockans alarmtid.)
 			
-___Klassen AlarmClock___
+#####Klassen AlarmClock
 
 Klassen ```AlarmClock``` måste implementeras så den som minst innehåller medlemmarna enligt klassdiagrammet i Figur A.9 och har den funktionalitet som beskrivs för respektive medlem.
 
@@ -139,7 +143,7 @@ Publik metod som representerar värdet av en instans av klassen. Den har som upp
 
 Tiderna ska presenteras på formatet HH:mm, d.v.s. timmar och minuter separerade av kolon (:). Är timmen ett ental ska enbart entalet visas. Är minuten ett ental ska presentationen av minuten inledas med 0. Exempel: Är klockan fem över elva på kvällen ska tiden presenteras som 23:05. Är tiden åtta minuter över sju på morgonen ska tiden presenteras som 7:08.
 
-___Klassen Program___
+#####Klassen Program
 
 Denna klass ska innehålla koden som testar klassen ```AlarmClock```.
 
