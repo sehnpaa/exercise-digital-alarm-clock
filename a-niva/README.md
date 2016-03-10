@@ -163,7 +163,7 @@ Privat statisk metod som har två parametrar. Den första parametern är en refe
 
 _Metoden ViewErrorMessage_
 
-Privat statisk metoden som tar ett felmeddelande som argument och presenterar det.
+Privat statisk metod som tar ett felmeddelande som argument och presenterar det.
 
 ![Class diagram](../bilder/a-bilder/errorMessageA.png)
 
