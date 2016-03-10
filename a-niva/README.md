@@ -165,7 +165,7 @@ _Metoden ViewErrorMessage_
 
 Privat statisk metod som tar ett felmeddelande som argument och presenterar det.
 
-![Class diagram](../bilder/a-bilder/errorMessageA.png)
+![Screenshot](../bilder/a-bilder/errorMessageA.png)
 
 Figur A.11. Exempel på presentation av två felmeddelanden.
 
@@ -173,7 +173,7 @@ _Metoden ViewTestHeader_
 
 Privat statisk metod som tar en sträng som argument och presenterar strängen.
 
-![Class diagram](../bilder/a-bilder/testHeaderA.png)
+![Screenshot](../bilder/a-bilder/testHeaderA.png)
 
 Figur A.12. Exempel på ett tests rubrik inklusive horisontell linje ovan testrubriken.
 
