@@ -10,15 +10,16 @@ namespace DigitalAlarmClock_B
         {
             Console.Title = "Digital väckarklocka - nivå B";
 
-            // Klockan går 8 minuter från 9:54. Larmtiden ställd på 10:00
-            AlarmClock ac2 = new AlarmClock(9, 54, 10, 0);
-            Run(ac2, 8);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            //// Initial test: Klockan går 8 minuter från 9:54. Larmtiden ställd på 10:00
+            //AlarmClock ac2 = new AlarmClock(9, 54, 10, 0);
+            //Run(ac2, 8);
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //return;
             
             // Test 1: 
             // Kontrollera att konstruktor #1 fungerar.
