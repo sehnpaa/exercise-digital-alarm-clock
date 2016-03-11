@@ -182,7 +182,7 @@ Figur A.12. Exempel på ett tests rubrik inklusive horisontell linje ovan testru
 1. Klassen ```AlarmClock``` ska implementeras enligt klassdiagrammet i Figur A.9 samt tillhörande beskrivning av respektive medlemsmetod.
 2. Då ett nytt ```AlarmClock```-objekt instansieras, ska undantag kastas av klassen om försök görs att initiera objektet med ogiltiga värden (dvs. som inte ligger inom angivna intervall för timmar och minuter).
 4. Ingen av medlemmarna i klassen ```AlarmClock``` får skriva ut något i konsolfönstret.
-4. Klassen ```Program``` måste implementeras så att de sju deltesterna under rubriken ”Testlista” körs när programmet exekveras. Var och en av testerna måste lyckas vilket ska kunna verifieras genom lämpliga utskrifter i konsolfönstret.
+4. Klassen ```Program``` måste implementeras så att de sju deltesterna under rubriken ”Testlista” körs när programmet exekveras. Var och en av testerna måste lyckas, vilket ska kunna verifieras genom lämpliga utskrifter i konsolfönstret.
 
 ## Tips
 
@@ -190,15 +190,15 @@ Läs om:
 
 + Klasser
 	+ Essential C# 6.0, 217-228.
-	+ https://msdn.microsoft.com/en-us/library/0b0thckt.aspx
+	+ //msdn.microsoft.com/en-us/library/0b0thckt.aspx
 + Åtkomstmodifierare (”_Access Modifiers_”)
 	+ Essential C# 6.0, 235-237.
-	+ https://msdn.microsoft.com/en-us/library/ms173121.aspx
+	+ //msdn.microsoft.com/en-us/library/ms173121.aspx
 + Egenskaper
 	+ Essential C# 6.0, 237-244.
-	+ https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx
+	+ //msdn.microsoft.com/en-us/library/x9fsa0sw.aspx
 + Konstruktorer
 	+ Essential C# 6.0, 254-263.
-	+ https://msdn.microsoft.com/en-us/library/k6sa6h87.aspx
+	+ //msdn.microsoft.com/en-us/library/k6sa6h87.aspx
 
 [Lösning](losning/)
