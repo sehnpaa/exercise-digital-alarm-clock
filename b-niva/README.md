@@ -222,7 +222,6 @@ Uppgiften för den överlagrade metoden ```ToString(string format)``` är att re
 Denna klass ska innehålla koden som testar klassen ```AlarmClock```. Figur B.10 visar ett förslag på medlemmar som kan användas för att skapa de sju testerna under rubriken ”Testlista” ovan. Klassen ```Program``` behöver inte på något tvingande sätt följa förslaget som enbart ska ses som en rekommendation. Det finns bara ett krav som måste uppfyllas och det är att metoden ```Main()``` måste se till att de sju deltesterna genomförs på avsett sätt.
 
 ![Class diagram](../bilder/b-bilder/classDiagramB.png)
-
 Figur B.10. Förslag på medlemmar i klassen Program.
 
 _Metoden Main_
