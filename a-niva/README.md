@@ -178,15 +178,15 @@ Läs om:
 
 + Klasser
 	+ Essential C# 6.0, 217-228.
-	+ //msdn.microsoft.com/en-us/library/0b0thckt.aspx
+	+ https://msdn.microsoft.com/en-us/library/0b0thckt.aspx
 + Åtkomstmodifierare (”_Access Modifiers_”)
 	+ Essential C# 6.0, 235-237.
-	+ //msdn.microsoft.com/en-us/library/ms173121.aspx
+	+ https://msdn.microsoft.com/en-us/library/ms173121.aspx
 + Egenskaper
 	+ Essential C# 6.0, 237-244.
-	+ //msdn.microsoft.com/en-us/library/x9fsa0sw.aspx
+	+ https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx
 + Konstruktorer
 	+ Essential C# 6.0, 254-263.
-	+ //msdn.microsoft.com/en-us/library/k6sa6h87.aspx
+	+ https://msdn.microsoft.com/en-us/library/k6sa6h87.aspx
 
 [Lösning](losning/)
