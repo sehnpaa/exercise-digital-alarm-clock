@@ -9,19 +9,18 @@ Digitala klockor visar tiden med siffror. Två sorters visning förekommer:
 
 Du ska skriva ett program som simulerar en 24-timmars digital klockdisplay, genom att skapa och använda dig av klassen ```AlarmClock```. Förutom att hålla ordning på aktuell tid ska  klassen även kunna hantera en alarmtid. Du kontrollerar att klassen fungerar som det är tänkt genom att skriva ett mindre test.  
 
-![ScreenShot A](../bilder/a-bilder/alarmClock_A.png)
-
+![ScreenShot A](../bilder/a-bilder/alarmClock_A.png)<
 Figur A.1. Exempel på resultat vid test av klassen AlarmClock.
 
 #####Hantering av timmar och minuter
 
 Den digitala klockdisplayen ska presentera tiden i timmar och minuter, t.ex. 9:57. Värdet till vänster om kolontecknet är timmarna, som går från 0 till och med 23. Passeras 23 ska värdet sättas till 0. Värdet till höger är minuterna. Giltiga värden för dessa är 0 till och med 59. Passeras 59 ska värdet sättas till 0.
 
-I princip handlar det om att låta en tidpunkt utgöras av två värden som presenteras åtskilda av ett kolon (:). Med andra ord kan en tidpunkt hanteras med hjälp av två heltal i form av två privata fält i klassen ```AlarmClock```. För att säkerställa att fälten verkligen inte tilldelas felaktiga värden måste dessa kapslas in av publika egenskaper, vars set-metoder kastar undantag om försök görs att tilldela egenskaperna ogiltiga värden.
+I princip handlar det om att låta en tidpunkt utgöras av två värden som presenteras åtskilda av ett kolon (:). Med andra ord kan en tidpunkt hanteras med hjälp av två heltal i form av två privata fält i klassen ```AlarmClock```. För att säkerställa att fälten inte tilldelas felaktiga värden måste dessa kapslas in av publika egenskaper, vars set-metoder kastar undantag om försök görs att tilldela egenskaperna ogiltiga värden.
 
 #####Test av klassen
 
-För att säkerställa att klassen ```AlarmClock``` uppfyller ställda krav ska ett enklare test skrivas som visar detta. Testet ska innehålla kod som verifierar att konstruktorer, egenskaper och metoder fungerar. Efter att klassen ```AlarmClock``` har implementerats ska testkoden skrivas i metoden ```Main()``` i klassen ```Program``` samt bestå av sju deltester:
+För att kontrollera att klassen ```AlarmClock``` uppfyller ställda krav ska ett enklare test skrivas som visar detta. Testet ska innehålla kod som verifierar att konstruktorer, egenskaper och metoder fungerar. Efter att klassen ```AlarmClock``` har implementerats ska testkoden skrivas i metoden ```Main()``` i klassen ```Program``` samt bestå av sju deltester:
 
 _Testlista_
 
@@ -29,24 +28,21 @@ _Testlista_
 	
 	För att kontrollera det nya objektets status, ska en sträng som representerar värdet av objektet skrivas ut. I konsolfönstret presenteras därmed "0:00 (0:00)" om standardkonstruktorn fungerar som den ska:
 	
-	![ScreenShot A](../bilder/a-bilder/testA_1.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_1.png)	
 	Figur A.2.
 	
 2. Test av konstruktorn med två parametrar.
 	
 	Argumenten 9 och 42 ska användas då ett nytt objekt skapas. Tiden som ska skrivas ut är "9:42 (0:00)".
 	
-	![ScreenShot A](../bilder/a-bilder/testA_2.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_2.png)	
 	Figur A.3.
 	
 3. Test av konstruktorn med fyra parametrar.
 	
 	Argumenten 13, 24, 7 och 35 ska användas då ett nytt objekt skapas. Tiden som ska skrivas ut är "13:24 (7:35)".
 	
-	![ScreenShot A](../bilder/a-bilder/testA_3.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_3.png)	
 	Figur A.4.
 	
 4. Test av metoden ```TickTock()``` som ska låta klockan gå en minut.
@@ -55,28 +51,24 @@ _Testlista_
 	
 	Timmar ska gå från 23 till 0 och i de fall timmar utgörs av ett ental ska timmen beskrivas med enbart en siffra. När minuterna är ental ska beskrivningen av minuten inledas med 0.
 	
-	![ScreenShot A](../bilder/a-bilder/testA_4.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_4.png)	
 	Figur A.5.
 	
 5. Ställer befintligt ```AlarmClock```-objekt till tiden 6:12 och alarmtiden till 6:15 och låter klockan gå 6 minuter. Testkoden ska på lämpligt sätt indikera när ett alarm går.
 	
-	![ScreenShot A](../bilder/a-bilder/testA_5.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_5.png)	
 	Figur A.6.
 	
 6. Test av egenskaperna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.
 	
-	![ScreenShot A](../bilder/a-bilder/testA_6.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_6.png)	
 	Figur A.7.
 	
 	(Av felmeddelandena framgår inte att det första och andra meddelandet berör väckarklockans tid och det tredje och fjärde felmeddelandet berör väckarklockans alarmtid.)
 	
 7. Test av konstruktorer så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.
 	
-	![ScreenShot A](../bilder/a-bilder/testA_7.png)
-	
+	![ScreenShot A](../bilder/a-bilder/testA_7.png)	
 	Figur A.8.
 	
 	(Av felmeddelandena framgår inte att det första meddelandet berör väckarklockans tid och det andra felmeddelandet berör väckarklockans alarmtid.)
@@ -86,7 +78,6 @@ _Testlista_
 Klassen ```AlarmClock``` måste implementeras så den som minst innehåller medlemmarna enligt klassdiagrammet i Figur A.9 och har den funktionalitet som beskrivs för respektive medlem.
 
 ![Class diagram](../bilder/a-bilder/classDiagramAC.png)
-
 Figur A.9. Klassdiagram för klassen AlarmClock.
 
 _Fältet_ __alarmHour_
@@ -139,7 +130,7 @@ Metoden ansvarar för att öka minuternas värde med 1. Värdet för minuterna m
 
 _Metoden ToString_
 
-Publik metod som representerar värdet av en instans av klassen. Den har som uppgift att beskriva aktuellt ```AlarmClock-objekt``` i form av en returnerad sträng innehållande aktuell tid samt alarmtiden inom parenteser. Inga utskrifter till konsolfönstret får göras av metoden.
+Publik metod som representerar värdet av en instans av klassen. Den har som uppgift att beskriva aktuellt ```AlarmClock```-objekt i form av en returnerad sträng innehållande aktuell tid samt alarmtiden inom parenteser. Inga utskrifter till konsolfönstret får göras av metoden.
 
 Tiderna ska presenteras på formatet HH:mm, d.v.s. timmar och minuter separerade av kolon (:). Är timmen ett ental ska enbart entalet visas. Är minuten ett ental ska presentationen av minuten inledas med 0. Exempel: Är klockan fem över elva på kvällen ska tiden presenteras som 23:05. Är tiden åtta minuter över sju på morgonen ska tiden presenteras som 7:08.
 
@@ -150,7 +141,6 @@ Denna klass ska innehålla koden som testar klassen ```AlarmClock```.
 Figur A.10 visar ett förslag på medlemmar som kan användas för att skapa de sju testerna under rubriken ”Testlista” ovan. Klassen ```Program``` måste dock inte följa förslaget, vilket enbart ska ses som en rekommendation. Det finns bara ett krav som måste uppfyllas och det är att metoden ```Main()``` måste se till att de sju deltesterna genomförs på avsett sätt.
 
 ![Class diagram](../bilder/a-bilder/classDiagramA.png)
-
 Figur A.10. Förslag på medlemmar i klassen Program.
 
 _Metoden Main_
@@ -159,14 +149,13 @@ Metoden ska instansiera objekt av klassen ```AlarmClock``` och testa dess konstr
 
 _Metoden Run_
 
-Privat statisk metod som har två parametrar. Den första parametern är en referens till ett ```AlarmClock-objekt```. Den andra parametern är antalet minuter som ```AlarmClock-objektet``` ska gå (vilket lämpligen görs genom att låta ett ```AlarmClock-objekt``` göra upprepade anrop av metoden ```TickTock()```)
+Privat statisk metod som har två parametrar. Den första parametern är en referens till ett ```AlarmClock```-objekt. Den andra parametern är antalet minuter som ```AlarmClock```-objektet ska gå (vilket lämpligen görs genom att låta ett ```AlarmClock```-objekt göra upprepade anrop av metoden ```TickTock()```)
 
 _Metoden ViewErrorMessage_
 
 Privat statisk metod som tar ett felmeddelande som argument och presenterar det.
 
 ![Screenshot](../bilder/a-bilder/errorMessageA.png)
-
 Figur A.11. Exempel på presentation av två felmeddelanden.
 
 _Metoden ViewTestHeader_
@@ -174,7 +163,6 @@ _Metoden ViewTestHeader_
 Privat statisk metod som tar en sträng som argument och presenterar strängen.
 
 ![Screenshot](../bilder/a-bilder/testHeaderA.png)
-
 Figur A.12. Exempel på ett tests rubrik inklusive horisontell linje ovan testrubriken.
 
 ## A-Krav

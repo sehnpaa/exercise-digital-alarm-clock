@@ -10,7 +10,6 @@ Digitala klockor visar tiden med siffror. Två sorters visning förekommer:
 Du ska skriva ett program som simulerar en 24-timmars digital klockdisplay, genom att skapa och använda dig av klasserna ```AlarmClock```, ```ClockDisplay``` och ```NumberDisplay```. Förutom att hålla ordning på aktuell tid ska klassen ```AlarmClock``` även kunna hantera en alarmtid. Du kontrollerar att klasserna fungerar som det är tänkt genom att skriva ett mindre test.  
 
 ![ScreenShot B](../bilder/b-bilder/alarmClock_B.png)
-
 Figur B.1. Exempel på resultat vid test av den digitala väckarklockan.
 
 #####Väckarklockans delar
@@ -19,7 +18,7 @@ För att undvika att kod upprepas (dvs. bryter mot principen DRY, ”_Don’t Re
 
 Den egentliga väckarklockan ska representeras av klassen ```AlarmClock```. För att undvika upprepning av kod (redundans) ska ```AlarmClock``` innehålla två referenser till objekt av typen ```ClockDisplay```. Den ena instansen av ```ClockDisplay``` ska ansvara för den aktuella tiden; den andra ska ansvara för alarmtiden.
 
-Objekt av typen ```ClockDisplay``` används för att hålla reda på timmar och minuter, och presentationen av dem. För att även undvika upprepning av kod, som har med hantering av timmar och minuter att göra, ska klassen ```ClockDisplay``` innehålla två referenser till objekt av typen ```NumberDisplay```. Den ena instansen av ```NumberDisplay``` ska ansvara för timmarna; den andra ska ansvara för minuterna.
+Objekt av typen ```ClockDisplay``` används för att hålla reda på timmar och minuter, och presentationen av dem. För att även undvika upprepning av kod som har med hantering av timmar och minuter att göra, ska klassen ```ClockDisplay``` innehålla två referenser till objekt av typen ```NumberDisplay```. Den ena instansen av ```NumberDisplay``` ska ansvara för timmarna; den andra ska ansvara för minuterna.
 
 Instanser av klassen ```NumberDisplay``` ska ansvara för att ett värde håller sig inom ett givet intervall, som sträcker sig från 0 till ett givet maximalt värde. Beroende på om det är timmar eller minuter ser intervallet olika ut. I det slutna intervallet mellan 0 och 23 om det gäller timmar. I det slutna intervallet mellan 0 och 59 om det gäller minuter.
 
@@ -27,9 +26,7 @@ Instanser av klassen ```NumberDisplay``` ska ansvara för att ett värde håller
 
 Den digitala klockdisplayen ska presentera tiden i timmar och minuter, t.ex. 9:57. Värdet till vänster om kolontecknet är timmarna, som går från 0 till och med 23. Passeras 23 ska värdet sättas till 0. Värdet till höger är minuterna. Giltiga värden för dessa är 0 till och med 59. Passeras 59 ska värdet sättas till 0.
 
-Det är ```ClockDisplay``` som tillsammans med ```NumberDisplay``` ansvarar för att en korrekt textbeskrivning av en tid finns att tillgå. Exempelvis ska tiden fem över sju på morgonen ge textbeskrivningen 7:05, medan fem minuter i nio på kvällen ska ge 20:55.
-
-I princip handlar det om att låta en tidpunkt utgöras två värden, som presenteras åtskilda av ett kolon (:). Dessa tidsvärden representeras av ```NumberDisplay-objekt```.  Med andra ord kan en tidpunkt hanteras med hjälp av två privata fält med referenser till ```NumberDisplay```-objekt i klassen ```ClockDisplay```.
+Det är ```ClockDisplay``` som tillsammans med ```NumberDisplay``` ansvarar för en korrekt textbeskrivning av en tid. Exempelvis ska tiden fem över sju på morgonen ge textbeskrivningen 7:05, medan fem minuter i nio på kvällen ska ge 20:55. Det handlar alltå om att låta en tidpunkt utgöras av två värden, som presenteras åtskilda av ett kolon (:). Dessa tidsvärden representeras av ```NumberDisplay-objekt```.  Med andra ord kan en tidpunkt hanteras med hjälp av två privata fält med referenser till ```NumberDisplay```-objekt i klassen ```ClockDisplay```.
 
 Används ett ```NumberDisplay```-objekt  till att representera minuter, så ska textbeskrivningen av värdet inledas med 0 om värdet är mindre än 10. Används ett ```NumberDisplay```-objekt till att representera timmar ska _inte_ textbeskrivningen inledas med 0.
 
@@ -45,24 +42,21 @@ _Testlista_
 	
 	För att kontrollera det nya objektets status, ska en sträng som representerar värdet av objektet skrivas ut. I konsolfönstret presenteras därmed "0:00 (0:00)" om standardkonstruktorn fungerar som den ska:
 	
-	![ScreenShot B](../bilder/b-bilder/testB_1.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_1.png)	
 	Figur B.2.
 	
 2. Test av konstruktorn med två parametrar.
 	
 	Argumenten 9 och 42 ska användas då ett nytt objekt skapas. Tiden som ska skrivas ut är "9:42 (0:00)".
 	
-	![ScreenShot B](../bilder/b-bilder/testB_2.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_2.png)	
 	Figur B.3.
 	
 3. Test av konstruktorn med fyra parametrar.
 	
 	Argumenten 13, 24, 7 och 35 ska användas då ett nytt objekt skapas. Tiden som ska skrivas ut är "13:24 (7:35)".
 	
-	![ScreenShot B](../bilder/b-bilder/testB_3.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_3.png)	
 	Figur B.4.
 	
 4. Test av metoden ```TickTock()``` som ska låta klockan gå en minut.
@@ -71,28 +65,24 @@ _Testlista_
 	
 	Timmar ska gå från 23 till 0 och i de fall timmar utgörs av ett ental ska timmen beskrivas med enbart en siffra. När minuterna är ental ska beskrivningen av minuten inledas med 0.
 	
-	![ScreenShot B](../bilder/b-bilder/testB_4.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_4.png)	
 	Figur B.5.
 	
 5. Ställer befintligt ```AlarmClock```-objekt till tiden 6:12 och alarmtiden till 6:15 och låter klockan gå 6 minuter. Testkoden ska på lämpligt sätt indikera när ett alarm går.
 	
-	![ScreenShot B](../bilder/b-bilder/testB_5.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_5.png)	
 	Figur B.6.
 	
 6. Test av egenskaperna så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.
 	
-	![ScreenShot B](../bilder/b-bilder/testB_6.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_6.png)	
 	Figur B.7.
 	
 	(Av felmeddelandena framgår inte att det första och andra meddelandet berör väckarklockans tid och det tredje och fjärde felmeddelandet berör väckarklockans alarmtid.)
 	
 7. Test av konstruktorer så att undantag kastas då tid och alarmtid tilldelas felaktiga värden.
 	
-	![ScreenShot B](../bilder/b-bilder/testB_7.png)
-	
+	![ScreenShot B](../bilder/b-bilder/testB_7.png)	
 	Figur B.8.
 	
 	(Av felmeddelandena framgår inte att det första meddelandet berörs väckarklockans tid och det andra felmeddelandet berör väckarklockans alarmtid.)
@@ -153,7 +143,7 @@ Publik metod som anropas för att få klockan att gå en minut, t.ex. från 9:42
 
 _Metoden ToString_
 
-Publik metod som representerar värdet av en instans av klassen. Den har som uppgift att beskriva aktuellt ```AlarmClock-objekt``` i form av en returnerad sträng innehållande aktuell tid samt alarmtiden inom parenteser. Inga utskrifter till konsolfönstret får göras av metoden.
+Publik metod som representerar värdet av en instans av klassen. Den har som uppgift att beskriva aktuellt ```AlarmClock```-objekt i form av en returnerad sträng innehållande aktuell tid samt alarmtiden inom parenteser. Inga utskrifter till konsolfönstret får göras av metoden.
 
 #####Klassen ClockDisplay
 
@@ -177,7 +167,7 @@ _Konstruktorerna_
 
 Konstruktorerna, som är två till antalet, ska se till att ett ```ClockDisplay```-objekt blir korrekt initierat. Det innebär att fälten ska initieras med lämpliga värden.
 
-Standardkonstruktorn ```ClockDisplay()``` ska se till att fälten initieras så de refererar till ```NumberDisplay-objekt``` men ingen tilldelning får ske i konstruktorns kropp, som måste vara tom. Denna konstruktor måste därför anropa den konstruktor i klassen som har två parametrar.
+Standardkonstruktorn ```ClockDisplay()``` ska se till att fälten initieras så de refererar till ```NumberDisplay```-objekt men ingen tilldelning får ske i konstruktorns kropp, som måste vara tom. Denna konstruktor måste därför anropa den konstruktor i klassen som har två parametrar.
 
 Med konstruktorn ```ClockDisplay(int hour, int minute)``` ska ett objekt initieras så att objektet ställs på den tid som parametrarna anger. Detta är den enda av konstruktorerna som får innehålla kod som leder till att fält i klassen tilldelas värden.
 
@@ -231,7 +221,7 @@ Uppgiften för den överlagrade metoden ```ToString(string format)``` är att re
 
 Denna klass ska innehålla koden som testar klassen ```AlarmClock```. Figur B.10 visar ett förslag på medlemmar som kan användas för att skapa de sju testerna under rubriken ”Testlista” ovan. Klassen ```Program``` behöver inte på något tvingande sätt följa förslaget som enbart ska ses som en rekommendation. Det finns bara ett krav som måste uppfyllas och det är att metoden ```Main()``` måste se till att de sju deltesterna genomförs på avsett sätt.
 
-![Class diagram](../bilder/classDiagramB.png)
+![Class diagram](../bilder/b-bilder/classDiagramB.png)
 
 Figur B.10. Förslag på medlemmar i klassen Program.
 
@@ -241,14 +231,13 @@ Metoden ska instansiera objekt av klassen ```AlarmClock``` och testa konstruktor
 
 _Metoden Run_
 
-Privat statisk metod som har två parametrar. Den första parametern är en referens till ett ```AlarmClock-objekt```. Den andra parametern är antalet minuter som ```AlarmClock-objektet``` ska gå (vilket lämpligen görs genom att låta ett ```AlarmClock-objekt``` göra upprepade anrop av metoden ```TickTock()```)
+Privat statisk metod som har två parametrar. Den första parametern är en referens till ett ```AlarmClock```-objekt. Den andra parametern är antalet minuter som ```AlarmClock```-objektet ska gå (vilket lämpligen görs genom att låta ett ```AlarmClock```-objekt göra upprepade anrop av metoden ```TickTock()```)
 
 _Metoden ViewErrorMessage_
 
 Privat statisk metodn som tar ett felmeddelande som argument och presenterar det.
 
 ![Screenshot](../bilder/a-bilder/errorMessageA.png)
-
 Figur B.11. Exempel på presentation av två felmeddelanden.
 
 _Metoden ViewTestHeader_
@@ -256,7 +245,6 @@ _Metoden ViewTestHeader_
 Privat statisk metod som tar en sträng som argument och presenterar strängen.
 
 ![Screenshot](../bilder/a-bilder/testHeaderA.png)
-
 Figur B.12. Exempel på ett tests rubrik inklusive horisontell linje ovan testrubriken.
 
 ## B-Krav

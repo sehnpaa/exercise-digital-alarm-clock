@@ -9,12 +9,11 @@ Digitala klockor visar tiden med siffror. Två sorters visning förekommer:
 
 Skriv ett program som simulerar en 24-timmars digital klockdisplay! Klassen klassen AlarmClock är "basen" i uppgiften, vilken kan utvecklas enligt de olika förutsättningarna för kravnivå A, B eller C. För att kontrollera att din "väckarklocka" fungerar på avsett sätt, ska även ett mindre test skrivas till varje program. 
 
-__Utmana dig själv för att ta dig till uppgiftens C-nivå__! Det ger dig bra erfarenhet av att skriva klasser enligt goda objektorienterade principer, vilket du kommer att ha stor nytta av inför stegets examinationsuppgift!    
+__Utmana dig själv för att ta dig till uppgiftens C-nivå__! Det ger dig bra erfarenhet av att skriva klasser enligt goda objektorienterade principer, vilket du kommer ha stor nytta av inför stegets examinationsuppgift!    
 
 - [Uppgiftsbeskrivning på A-nivå:](a-niva/)
 
 ![ScreenShot A](bilder/a-bilder/alarmClock_A.png)
-
 Figur 1: Kravnivå A
 
 - [Uppgiftsbeskrivning på B-nivå:](b-niva/)
