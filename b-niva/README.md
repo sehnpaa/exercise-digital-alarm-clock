@@ -30,9 +30,9 @@ Det är ```ClockDisplay``` som tillsammans med ```NumberDisplay``` ansvarar för
 
 Används ett ```NumberDisplay```-objekt  till att representera minuter, så ska textbeskrivningen av värdet inledas med 0 om värdet är mindre än 10. Används ett ```NumberDisplay```-objekt till att representera timmar ska _inte_ textbeskrivningen inledas med 0.
 
-För att säkerställa att fält inte tilldelas felaktiga värden måste alla fält i klasserna kapslas in av lämpliga publika egenskaper. Även om klasserna ```AlarmClock``` och ```ClockDisplay``` innehåller egenskaper med ```set```-metoder räcker det om validering sker i ```NumberDisplay```, eftersom ```NumberDisplay```-objektet känner till vilket som är dess maximala värde. En ```set```-metod i klassen ```NumberDisplay``` ska därför kasta ett undantag om försök görs att tilldela en egenskap något värde ogiltigt värde.
+För att säkerställa att fält inte tilldelas felaktiga värden måste alla fält i klasserna kapslas in av lämpliga publika egenskaper. Även om klasserna ```AlarmClock``` och ```ClockDisplay``` innehåller egenskaper med ```set```-metoder räcker det om validering sker i ```NumberDisplay```, eftersom ```NumberDisplay```-objektet känner till vilket som är dess maximala värde. En ```set```-metod i klassen ```NumberDisplay``` ska därför kasta ett undantag om försök görs att tilldela en egenskap något ogiltigt värde.
 
-#####Test av klassen
+#####Test av klasserna
 
 För att säkerställa att klasserna ```AlarmClock```, ```ClockDisplay``` och ```NumberDisplay``` uppfyller ställda krav ska ett enklare test skrivas som visar detta. Testet ska innehålla kod som verifierar att konstruktorer, egenskaper och metoder fungerar. Efter att klassen ```AlarmClock```, ```ClockDisplay``` och ```NumberDisplay``` har implementerats ska testkoden skrivas i metoden ```Main()``` i klassen ```Program```. Testet ska bestå av sju deltester:
 
@@ -201,21 +201,21 @@ _Konstruktorerna_
 
 Konstruktorerna, som är två till antalet, ska se till att ett ```NumberDisplay```-objekt blir korrekt initierat. Det innebär att fälten ska initieras med lämpliga värden.
 
-Konstruktorn ```NumberDisplay(int maxNumber)``` ska se till att fälten initieras så de refererar till ```NumberDisplay```-obejkt men ingen tilldelning får ske i konstruktorns kropp, som måste vara tom. Denna konstruktor måste därför anropa den konstruktor i klassen som har två parametrar.
+Konstruktorn ```NumberDisplay(int maxNumber)``` ska se till att fälten initieras så de refererar till ```NumberDisplay```-objekt men ingen tilldelning får ske i konstruktorns kropp, som måste vara tom. Denna konstruktor måste därför anropa den konstruktor i klassen som har två parametrar.
 
 Med konstruktorn ```NumberDisplay(int maxNumber, int number)``` ska ett objekt initieras så att objektets fält tilldelas de värden som parametrarna har. Detta är den enda av konstruktorerna som får innehålla kod som leder till att fält i klassen tilldelas värden.
 
 _Metoden Increment_
 
-Publik metod som anropas för att få ```NumberDisplay```-objektet att öka sitt nummer med 1. Då värdet, som fältet ```_number``` har, ska passera  värdet av fältet ```_maxNumber```, ska fältet ```_number``` tilldelas värdet 0. Inga utskrifter till konsolfönstret får göras av metoden.
+Publik metod som anropas för att få ```NumberDisplay```-objektet att (via egenskapen ```Number```) öka sitt nummer med 1. Om värdet, som fältet ```_number``` har, skulle bli större än värdet av fältet ```_maxNumber```, ska ```_number``` tilldelas värdet 0. Inga utskrifter till konsolfönstret får göras av metoden.
 
 _Metoderna ToString_
 
 ```ToString()``` ska överlagras, dvs. det ska finnas två metoder med samma namn men med olika paramterlistor. Inga utskrifter till konsolfönstret får göras av någon av metoderna.
 
-Uppgiften för den publika metoden ```ToString()```, vilken ärvs från basklassen ```Object```, är att returnera en sträng som representerar värdet av en instans av klassen ```NumberDisplay```. Strängen ska innehålla numret, med villkoret att nummer som är mindre än tio ska inledas med en 0:a.
+Uppgiften för den publika metoden ```ToString()```, vilken ärvs från basklassen ```Object```, är att returnera en sträng som representerar värdet av en instans av klassen ```NumberDisplay```. Strängen ska innehålla numret, utan att nummer mindre än tio inleds med 0.
 
-Uppgiften för den överlagrade metoden ```ToString(string format)``` är att returnera en sträng, som representerar ```NumberDisplay```-instansens tidsvärde, i ett format som bestäms av parametern. Om argumentet i "format"-strängen ”0” eller ”G” ska textbeskrivningen av numret inte inledas med 0. Är formatsträngen ”00” ska numret inledas med 0 i de fall som numret är mindre än tio. Alla övriga värden på formatsträngen ska leda till att ett undantag av typen ```FormatException``` kastas.
+Uppgiften för den överlagrade metoden ```ToString(string format)``` är att returnera en sträng, som representerar ```NumberDisplay```-instansens tidsvärde, i ett format som bestäms av parametern. Om argumentet i "format"-strängen är ”0” eller ”G” ska textbeskrivningen av numret inte inledas med 0. Är formatsträngen ”00” ska numret inledas med 0 i de fall som numret är mindre än tio. Alla övriga värden på formatsträngen ska leda till att ett undantag av typen ```FormatException``` kastas.
 
 #####Klassen Program
 
@@ -234,7 +234,7 @@ Privat statisk metod som har två parametrar. Den första parametern är en refe
 
 _Metoden ViewErrorMessage_
 
-Privat statisk metodn som tar ett felmeddelande som argument och presenterar det.
+Privat statisk metod som tar ett felmeddelande som argument och presenterar det.
 
 ![Screenshot](../bilder/a-bilder/errorMessageA.png)
 Figur B.11. Exempel på presentation av två felmeddelanden.
