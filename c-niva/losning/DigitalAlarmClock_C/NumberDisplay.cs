@@ -5,7 +5,7 @@ namespace DigitalAlarmClock_C
     /// <summary>
     /// Representerar en nummerdisplay.
     /// </summary>
-    public class NumberDisplay
+    class NumberDisplay
     {
         #region Fält
 

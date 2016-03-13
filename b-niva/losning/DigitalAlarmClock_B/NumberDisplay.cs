@@ -2,7 +2,7 @@
 
 namespace DigitalAlarmClock_B
 {
-    public class NumberDisplay
+    class NumberDisplay
     {
         #region Fält
 
