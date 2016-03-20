@@ -9,7 +9,7 @@ Digitala klockor visar tiden med siffror. Två sorters visning förekommer:
 
 Du ska skriva ett program som simulerar en 24-timmars digital klockdisplay, genom att skapa och använda dig av klassen ```AlarmClock```. Förutom att hålla ordning på aktuell tid ska  klassen även kunna hantera en alarmtid. Du kontrollerar att klassen fungerar som det är tänkt genom att skriva ett mindre test.  
 
-![ScreenShot A](../bilder/a-bilder/alarmClock_A.png)<
+![ScreenShot A](../bilder/a-bilder/alarmClock_A.png)
 Figur A.1. Exempel på resultat vid test av klassen AlarmClock.
 
 #####Hantering av timmar och minuter
