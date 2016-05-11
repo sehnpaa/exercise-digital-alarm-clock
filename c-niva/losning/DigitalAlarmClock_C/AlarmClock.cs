@@ -37,7 +37,7 @@ namespace DigitalAlarmClock_C
         }
 
         /// <summary>
-        /// Initierar en ny instans av ClockDisplay med angiven tid.
+        /// Initierar en ny instans av AlarmClock med angiven tid.
         /// </summary>
         /// <param name="hour"></param>
         /// <param name="minute"></param>
@@ -48,7 +48,7 @@ namespace DigitalAlarmClock_C
         }
 
         /// <summary>
-        /// Initierar en ny instans av ClockDisplay med angiven tid och alarmtid.
+        /// Initierar en ny instans av AlarmClock med angiven tid och alarmtid.
         /// </summary>
         /// <param name="hour"></param>
         /// <param name="minute"></param>
@@ -61,7 +61,7 @@ namespace DigitalAlarmClock_C
         }
 
         /// <summary>
-        /// Initierar en ny instans av ClockDisplay med angiven tid och alarmtider.
+        /// Initierar en ny instans av AlarmClock med angiven tid och alarmtider.
         /// </summary>
         /// <param name="time"></param>
         /// <param name="alarmTimes"></param>
@@ -105,7 +105,7 @@ namespace DigitalAlarmClock_C
         #region Instansmetoder
 
         /// <summary>
-        /// Lägger till en minut till aktuellt AlamrClock-objektet.
+        /// Lägger till en minut till aktuellt AlarmClock-objektet.
         /// </summary>
         /// <returns></returns>
         public bool TickTock()
